@@ -1,0 +1,7 @@
+{
+  "nome": "Produto Performance",
+  "preco": 10.5,
+  "quantidade": 20,
+  "estoque_minimo": 5,
+  "status": "ATIVO"
+}

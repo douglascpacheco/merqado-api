@@ -1,0 +1,33 @@
+{
+  "name": "merqado-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha ./test/**/*.test.js --timeout=20000 --reporter mochawesome",
+    "test:report": "mocha ./test/**/*.test.js --timeout=20000 --reporter mochawesome",
+    "test:performance": "k6 run performance/test/login.test.js && k6 run performance/test/produtos.test.js && k6 run performance/test/movimentacoes.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "MerQAdo API - Gestao de estoque com qualidade.",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mochawesome": "^7.1.4",
+    "swagger-ui-express": "^4.6.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "chai": "^6.2.0",
+    "mocha": "^11.7.4",
+    "supertest": "^7.1.4"
+  }
+}

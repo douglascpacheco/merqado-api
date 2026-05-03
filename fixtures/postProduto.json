@@ -1,0 +1,30 @@
+{
+  "produtoValido": {
+    "nome": "Arroz 5kg",
+    "preco": 29.9,
+    "quantidade": 10,
+    "estoque_minimo": 3,
+    "status": "ATIVO"
+  },
+  "produtoPrecoInvalido": {
+    "nome": "Feijao 1kg",
+    "preco": 0,
+    "quantidade": 10,
+    "estoque_minimo": 3,
+    "status": "ATIVO"
+  },
+  "produtoMovimentacao": {
+    "nome": "Cafe 500g",
+    "preco": 18.5,
+    "quantidade": 10,
+    "estoque_minimo": 2,
+    "status": "ATIVO"
+  },
+  "produtoInativo": {
+    "nome": "Produto Inativo",
+    "preco": 12.5,
+    "quantidade": 5,
+    "estoque_minimo": 1,
+    "status": "INATIVO"
+  }
+}

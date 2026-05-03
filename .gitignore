@@ -1,0 +1,11 @@
+node_modules/
+mochawesome-report/
+.env
+server.err.log
+server.out.log
+publish-tree.json
+publish-tree-small.json
+group1.json
+group2.json
+group3.json
+group4.json

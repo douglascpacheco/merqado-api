@@ -1,0 +1,51 @@
+name: Regressivo - API
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    env:
+      BASE_URL: 'http://localhost:3000'
+
+    steps:
+      - name: Checkout do Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurando Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalando as dependencias
+        run: npm install
+
+      - name: Executar os testes funcionais
+        run: |
+          npm start &
+          API_PID=$!
+          echo "Aguardando servidor iniciar..."
+          sleep 5
+          npm test
+          kill $API_PID
+
+      - name: Executar os testes com relatorio
+        run: |
+          npm start &
+          API_PID=$!
+          echo "Aguardando servidor iniciar..."
+          sleep 5
+          npm run test:report
+          kill $API_PID
+
+      - name: Verificar conteudo do relatorio
+        run: ls -R mochawesome-report || echo "Relatorio nao encontrado"
+
+      - name: Upload do relatorio Mochawesome
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: mochawesome-report/

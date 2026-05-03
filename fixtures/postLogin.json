@@ -1,0 +1,18 @@
+{
+  "usuarioValido": {
+    "email": "operador@merqado.com",
+    "senha": "123456"
+  },
+  "usuarioHelper": {
+    "email": "helper@merqado.com",
+    "senha": "123456"
+  },
+  "usuarioPipeline": {
+    "email": "pipeline@merqado.com",
+    "senha": "123456"
+  },
+  "usuarioInvalido": {
+    "email": "operador@merqado.com",
+    "senha": "senhaerrada"
+  }
+}

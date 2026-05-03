@@ -1,0 +1,14 @@
+{
+  "entrada": {
+    "tipo": "ENTRADA",
+    "quantidade": 5
+  },
+  "saida": {
+    "tipo": "SAIDA",
+    "quantidade": 3
+  },
+  "saidaMaiorEstoque": {
+    "tipo": "SAIDA",
+    "quantidade": 999
+  }
+}
