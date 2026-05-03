@@ -30,7 +30,8 @@ jobs:
           echo "Aguardando servidor iniciar..."
           sleep 5
           npm test
-          kill $API_PID
+          kill $API_PID || true
+          pkill -f "node index.js" || true
 
       - name: Executar os testes com relatorio
         run: |
@@ -39,7 +40,8 @@ jobs:
           echo "Aguardando servidor iniciar..."
           sleep 5
           npm run test:report
-          kill $API_PID
+          kill $API_PID || true
+          pkill -f "node index.js" || true
 
       - name: Verificar conteudo do relatorio
         run: ls -R mochawesome-report || echo "Relatorio nao encontrado"
